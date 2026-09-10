@@ -1,39 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Meu Streaming</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>rnzinqlz + | Streaming Escolar</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-
-<div class="perfil">
-
-<img src=Imagens/Fotoperfil.jpg class="fotoPerfil">
-
-<h1>NETFLIX PROF DAVI</h1>
-
+<body class="bloqueado">
+<div class="ceu-magico" aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
 </div>
 
-<div class="container">
+<section id="telaPerfil" class="tela-perfil">
+    <div class="marca-abertura">rnzinqlz <span>+</span></div>
+    <div class="portal-brilho" aria-hidden="true"></div>
 
-<div class="lista">
-<h2>🎬 Filmes</h2>
-<div id="listaFilmes"></div>
+    <div id="etapaEscolha" class="painel-login etapa ativa">
+        <p class="selo">Entrada especial</p>
+        <h1>Quem está assistindo?</h1>
+        <button id="perfilPrincipal" class="card-perfil" type="button">
+            <img src="Imagens/GatoFotodePerfil.jpg" alt="Perfil principal">
+            <strong>rnzinqlz</strong>
+            <small>Perfil principal</small>
+        </button>
+    </div>
+
+    <div id="etapaConfirmacao" class="painel-login etapa">
+        <p class="selo">Confirmação</p>
+        <h2>Tem certeza de que deseja entrar nesse perfil?</h2>
+        <div class="confirmacao-perfil">
+            <img src="Imagens/GatoFotodePerfil.jpg" alt="Perfil rnzinqlz">
+            <strong>rnzinqlz</strong>
+        </div>
+        <div class="linha-botoes">
+            <button id="voltarPerfil" class="btn-secundario" type="button">Voltar</button>
+            <button id="confirmarPerfil" class="btn-principal" type="button">Entrar</button>
+        </div>
+    </div>
+
+    <div id="etapaSenha" class="painel-login etapa">
+        <p class="selo">Acesso protegido</p>
+        <h2>Digite a senha do perfil</h2>
+        <div class="campo-senha">
+            <input id="senhaPerfil" type="password" inputmode="numeric" maxlength="3" placeholder="Senha">
+            <div class="traco-magico"></div>
+        </div>
+        <p id="mensagemSenha" class="mensagem-senha">Dica: a senha tem 3 números.</p>
+        <button id="desbloquear" class="btn-principal" type="button">Desbloquear catálogo</button>
+    </div>
+</section>
+
+<div id="appStreaming" class="app-streaming">
+    <header class="navbar">
+        <div class="logo">rnzinqlz <span>+</span></div>
+
+        <nav class="menu">
+            <a href="#filmes">Filmes Marvel</a>
+            <a href="#series">Séries</a>
+            <a href="#minha-lista">Minha Lista</a>
+        </nav>
+
+        <div class="perfil">
+            <img src="Imagens/GatoFotodePerfil.jpg" class="fotoPerfil" alt="Foto de perfil">
+        </div>
+    </header>
+
+    <section class="banner">
+        <div class="banner-conteudo">
+            <p class="selo">Catálogo desbloqueado</p>
+            <h1>Bem-vindo ao universo rnzinqlz +</h1>
+            <p class="descricao">Filmes e séries reunidos em uma experiência azul, brilhante e imersiva para apresentar seu trabalho com estilo.</p>
+
+            <div class="acoes-banner">
+                <button id="assistirDestaque" class="btnAssistir" type="button">&#9654; Assistir agora</button>
+                <button id="listaDestaque" class="btnDetalhes" type="button">+ Minha lista</button>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <section id="filmes" class="lista marvel-exclusivo">
+            <div class="cabecalho-lista">
+                <p>Área exclusiva</p>
+                <h2>FILMES MARVEL</h2>
+            </div>
+            <div id="listaFilmes" class="carrossel"></div>
+        </section>
+
+        <section id="series" class="lista">
+            <div class="cabecalho-lista">
+                <p>Maratonas da noite</p>
+                <h2>Séries</h2>
+            </div>
+            <div id="listaSeries" class="carrossel"></div>
+        </section>
+
+        <section id="minha-lista" class="lista minha-lista">
+            <div class="cabecalho-lista">
+                <p>Seus favoritos</p>
+                <h2>Minha Lista</h2>
+            </div>
+            <div id="itensMinhaLista" class="lista-favoritos">
+                <p class="lista-vazia">Nenhum título adicionado ainda.</p>
+            </div>
+        </section>
+    </main>
 </div>
 
-<div class="lista">
-<h2>📺 Séries</h2>
-<div id="listaSeries"></div>
-</div>
-
-</div>
-
+<script src="filmes.js"></script>
 <script src="script.js"></script>
-
 </body>
 </html>
-
-
-
